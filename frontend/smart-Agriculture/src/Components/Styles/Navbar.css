@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+li {
+  list-style: none;
+}
+   
+   .navbar {
+      width: 100%;
+    display: grid;
+   grid-template-columns: 6rem 1fr 2fr 6rem;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+   background-color: white;
+
+   }
+   .logo{
+      display: grid;
+      grid-column: 2/3;
+      justify-content: start;
+      align-items: center;
+      color: black;
+   }
+   .list-item{
+      grid-column: 3/4;
+   }
+   .list-item ul {
+      height: 6rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+}
+.navbar ul li{
+  display: grid;
+  align-items: center;
+  justify-content: flex-end;
+    font-size: 1rem;
+    text-align: right;
+}
+
+.navbar ul li a {
+   text-transform: capitalize;
+   color: rgba(0, 0, 3, 0.8);
+   transition: 0.5s;
+    text-decoration: none;
+}
+.list-item ul li:first-child{
+   grid-column: 3/4;
+}
+
+.navbar ul li a:hover {
+   transform-origin: left;
+   color: rgba(0, 0, 3, 1);
+   text-decoration: underline;
+   transition: 0.5s;
+}
+.weather{
+   border-radius: 50%;
+   border: 8px solid rgb(228, 234, 228);
+   color: rgb(244, 243, 243);
+   font-size: 1.5rem;
+   padding: 0.4rem;
+   background-color: rgb(163, 162, 162);
+    
+}
+.seeds{
+    border-radius: 50%;
+    border: 8px solid rgb(228, 234, 228);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+     
+ }
+ .disease{
+    border-radius: 50%;
+    border: 8px solid rgb(228, 234, 228);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+     
+ }
+ .form{
+    border-radius: 50%;
+    border: 8px solid rgb(228, 234, 228);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+     
+ }
+ .form:hover{
+    border-radius: 50%;
+    border: 8px solid rgb(198, 199, 196);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+ }
+ .weather:hover{
+    border-radius: 50%;
+    border: 8px solid rgb(198, 199, 196);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+ }
+ .seeds:hover{
+    border-radius: 50%;
+    border: 8px solid rgb(198, 199, 196);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+ }
+ .disease:hover{
+    border-radius: 50%;
+    border: 8px solid rgb(198, 199, 196);
+    color: rgb(244, 243, 243);
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+ }
+ .menu{
+   display: none;
+ }
+/* responsive css style  */
+@media (max-width: 1080px) {
+   .navbar {
+     height: 6rem;
+     grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
+   }
+ 
+   .logo,
+   .list-item ul {
+     height: 6rem;
+   }
+ }
+
+ @media (max-width: 998px) {
+   .navbar {
+     height: 6rem;
+     grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+   }
+ 
+   .list-item {
+     display: none;
+   }
+ 
+   .logo,
+    {
+     height: 6rem;
+   }
+ 
+   .list-item {
+     grid-column: 3/4;
+     position: relative;
+     z-index: 99;
+   }
+ 
+   .list-item {
+     background-color: rgb(243, 107, 107);
+     height: 25rem;
+     display: grid;
+     grid-column: 2/5;
+     align-items: center;
+     padding-left: 5rem;
+     transition: all 2s linear;
+     transform-origin: top;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+   }
+ 
+   .list-item ul {
+     height: 25rem;
+     display: flex;
+     justify-content: space-around;
+     flex-direction: column;
+     align-items: start;
+   }
+ 
+   .list-item ul li:first-child {
+     transition-delay: 0.2s;
+   }
+
+ 
+   .menu{
+     display: block;
+     font-size: 1.3rem;
+   }
+ }
+
+ @media (max-width: 520px) {
+   .navbar {
+     height: 6rem;
+     grid-template-columns: 1rem 4fr 1fr 1fr 1rem;
+   }
+ 
+   .logo,
+   .list-item ul {
+     height: 6rem;
+   }
+
+ 
+   .list-item {
+     height: 6rem;
+     display: flex;
+     justify-self: end;
+     align-items: center;
+   }
+ 
+   .list-item .menu {
+     display: block;
+     font-size: 2rem;
+   }
+ 
+ }
+   
+  
