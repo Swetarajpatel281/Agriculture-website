@@ -16,7 +16,7 @@ li {
    grid-template-columns: 6rem 1fr 2fr 6rem;
    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px,
    rgba(0, 0, 0, 0.3) 0px 10px 20px -30px;
-   background-color: rgb(158, 245, 143);
+   background-color: rgb(112, 214, 92);
    position: fixed;
 
    }
@@ -67,11 +67,11 @@ li {
 }
 .weather{
    border-radius: 50%;
-   border: 8px solid rgb(228, 234, 228);
-   color: rgb(244, 243, 243);
+   border: 8px solid rgb(124, 246, 124);
+   color: rgb(243, 244, 243);
    font-size: 1.5rem;
    padding: 0.4rem;
-   background-color: rgb(163, 162, 162);
+   background-color: rgb(77, 161, 53);
     
 }
 .seeds{

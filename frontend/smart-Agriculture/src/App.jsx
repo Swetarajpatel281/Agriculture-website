@@ -24,17 +24,6 @@ function App() {
       </Routes>
       {/* <Footer/> */}
     </Router>
-      /* <Navbar/>
-     
-      <div className="contents">
-         <Weather/>
-        {/* <MarketUpdates/>
-        <DiseaseRecognition/>
-        <Forum/>
-        */
-
-     // </div> */}
-    // </>
 
   )
 }
