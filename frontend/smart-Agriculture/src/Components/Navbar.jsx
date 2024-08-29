@@ -1,4 +1,4 @@
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Styles/Navbar.css';
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { PiCoffeeBeanDuotone } from "react-icons/pi";
@@ -7,6 +7,10 @@ import { MdOutlineForum} from "react-icons/md";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import logo from "../assets/agro-logo.png"
+import './Weatherdetail/Weather'
+import './DiseaseRecognition'
+import './Seeds'
+import './Forum'
 const Navbar = () =>{
    const [navs, setNavs] = useState(false);
 
@@ -21,22 +25,27 @@ return (
              <li>
              <TiWeatherPartlySunny
              className='weather' />
-                <a href="#weather">Weather</a></li>
-            
+                <NavLink to="/weather" onClick={() => setNavs(false)}>Weather</NavLink>
+                </li> 
+                
              <li>
              <PiCoffeeBeanDuotone 
              className='seeds'/>
-                <a href="#seeds">Seeds</a></li>
+                 <NavLink to="/seeds" onClick={() => setNavs(false)}>Seeds</NavLink>
+                </li>
         
             <li>
             <FaDisease 
              className='disease'/>
-                <a href="#disease-recognition">Disease</a></li>
+              <NavLink to="/disease-recognition" onClick={() => setNavs(false)}>Disease</NavLink>
+               
+                </li>
             
         <li>
         <MdOutlineForum 
         className='form'/>
-            <a href="#forum">Forum</a></li>
+           <NavLink to="/forum" onClick={() => setNavs(false)}>Forum</NavLink>
+            </li>
           
          </ul>
            <div onClick={() => setNavs(!navs)} className="menu">

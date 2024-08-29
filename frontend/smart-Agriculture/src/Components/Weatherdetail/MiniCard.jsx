@@ -7,7 +7,7 @@ import rain from '../../assets/icons/rain.png';
 import snow from '../../assets/icons/snow.png';
 import storm from '../../assets/icons/storm.png';
 import wind from '../../assets/icons/windy.png';
-import './Weathercss/MiniCard.css' // Import the CSS file
+import "./Weathercss/MiniCard.css"
 
 const MiniCard = ({ time, temp, iconString }) => {
   const [icon, setIcon] = useState(sun);

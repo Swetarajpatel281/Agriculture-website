@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import './Weathercss/Weather.css';
+import "./Weathercss/Weather.css"
 import search from '../../assets/search.svg'
 import { useStateContext } from './Context';
 import BackgroundLayout from './BackgroundLayout.jsx';
@@ -21,7 +21,7 @@ function Weather() {
   return (
     <div className="app-container">
       <nav className="nav">
-        {/* <h1 className="title">Weather App</h1> */}
+        <h1 className="title">Weather App</h1>
         <div className="search-bar">
           <img src={search} alt="search" className="search-icon" />
           <input

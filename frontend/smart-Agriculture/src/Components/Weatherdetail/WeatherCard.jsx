@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {useDate}  from './useDate';
 import sun from '../../assets/icons/sun.png'
 import cloud from '../../assets/icons/cloud.png';
@@ -8,7 +8,7 @@ import rain from '../../assets/icons/rain.png';
 import snow from '../../assets/icons/snow.png';
 import storm from '../../assets/icons/storm.png';
 import wind from '../../assets/icons/windy.png';
-import './Weathercss/WeatherCard.css' // Import CSS specific to this component
+import "./Weathercss/WeatherCard.css"
 
 const WeatherCard = ({
   temperature,
@@ -76,14 +76,14 @@ const WeatherCard = ({
   );
 };
 // Define PropTypes
-WeatherCard.propTypes = {
-    temperature: PropTypes.number.isRequired,
-    windspeed: PropTypes.number.isRequired,
-    humidity: PropTypes.number.isRequired,
-    place: PropTypes.string.isRequired,
-    heatIndex: PropTypes.number,
-    iconString: PropTypes.string.isRequired,
-    conditions: PropTypes.string.isRequired,
-  };
+// WeatherCard.propTypes = {
+//     temperature: PropTypes.number.isRequired,
+//     windspeed: PropTypes.number.isRequired,
+//     humidity: PropTypes.number.isRequired,
+//     place: PropTypes.string.isRequired,
+//     heatIndex: PropTypes.number,
+//     iconString: PropTypes.string.isRequired,
+//     conditions: PropTypes.string.isRequired,
+//   };
 
 export default WeatherCard;

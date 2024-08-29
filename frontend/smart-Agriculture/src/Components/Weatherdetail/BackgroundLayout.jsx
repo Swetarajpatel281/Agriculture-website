@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useStateContext } from '../../Components/Weatherdetail/Context';
-// import './Weathercss/BackgroundLayout.css';
+import "./Weathercss/BackgroundLaout.css"
+
 // Import images
 import Clear from '../../assets/images/clear.jpg';
 import Fog from '../../assets/images/fog.png';
