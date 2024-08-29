@@ -1,0 +1,194 @@
+/* Main container for the login form */
+.login-form-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* When active, make the login form visible */
+.login-form-container.active {
+    display: flex; /* Show the form */
+}
+
+/* Styling for the form itself */
+.login-form-container form {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 10px;
+    position: relative;
+    z-index: 1001; /* Above the background */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Form title styling */
+.login-form-container form h3 {
+    font-size: 1.5rem; 
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Label for inputs */
+.login-form-container form span {
+    display: block;
+    font-size: 1rem; 
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Input fields styling */
+.login-form-container form .box {
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 0.8rem; 
+    border: 1px solid #777676;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+/* Focus effect on input fields */
+.login-form-container form .box:focus {
+    border-color: #00ff1e;
+}
+
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.login-form-container form .checkbox input {
+    margin-right: 0.5rem;
+}
+
+.login-form-container form .checkbox label {
+    font-size: 1rem; 
+    color: #555;
+    cursor: pointer;
+}
+
+/* Button styling */
+.login-form-container form .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem; 
+    color: #fff;
+    background-color: #28a745; /* Green button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.login-form-container form .btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+.login-form-container form p {
+    font-size: 1rem; /* Adjusted font size */
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-form-container form p a {
+    color: #30c466;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+.login-form-container form p a:hover {
+    color: #30a927; 
+}
+
+.login-form-container .close-btn {
+    position: absolute;
+    top:10rem;
+    right: 30rem;
+    background: none;
+    border: none;
+    font-size: 3rem; 
+    color: #27b73f;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-form-container .close-btn:hover {
+    color: #55b061; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-form-container form {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .login-form-container form h3 {
+        font-size: 1.5rem; /* Slightly smaller title */
+    }
+
+    .login-form-container form span {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .login-form-container form .box,
+    .login-form-container form .btn {
+        font-size: 0.9rem; /* Adjusted font size for inputs and button */
+    }
+
+    .login-form-container form p {
+        font-size: 0.9rem; 
+    }
+
+    .login-form-container .close-btn {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-container form {
+        max-width: 95%;
+        padding: 1rem;
+    }
+
+    .login-form-container form h3 {
+        font-size: 1.5rem; 
+    }
+
+    .login-form-container form span {
+        font-size: 0.8rem; 
+    }
+
+    .login-form-container form .box,
+    .login-form-container form .btn {
+        font-size: 0.8rem; 
+    }
+
+    .login-form-container form p {
+        font-size: 0.8rem; 
+    }
+
+    .login-form-container .close-btn {
+        font-size: 1rem; 
+    }
+}

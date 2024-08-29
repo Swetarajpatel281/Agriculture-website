@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
 import './Styles/Navbar.css';
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import { PiCoffeeBeanDuotone } from "react-icons/pi";
+
+import { GiGrainBundle } from "react-icons/gi";
 import { FaDisease } from "react-icons/fa";
 import { MdOutlineForum} from "react-icons/md";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaUserAlt } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import logo from "../assets/agro-logo.png"
@@ -11,9 +14,20 @@ import './Weatherdetail/Weather'
 import './DiseaseRecognition'
 import './Seeds'
 import './Forum'
+import Login from './Login'
 const Navbar = () =>{
    const [navs, setNavs] = useState(false);
+   const [isActive, setIsActive] = useState(false);
 
+   // Function to toggle the login form's visibility
+   const toggleLoginForm = () => {
+     setIsActive(!isActive);
+   };
+ 
+   // Function to close the login form
+   const closeLoginForm = () => {
+     setIsActive(false);
+   };
 return (
      <nav className="navbar">
       <div className="logo">
@@ -29,9 +43,9 @@ return (
                 </li> 
                 
              <li>
-             <PiCoffeeBeanDuotone 
+             <GiGrainBundle 
              className='seeds'/>
-                 <NavLink to="/seeds" onClick={() => setNavs(false)}>Seeds</NavLink>
+                 <NavLink to="/seeds" onClick={() => setNavs(false)}>Crop Advise</NavLink>
                 </li>
         
             <li>
@@ -40,13 +54,22 @@ return (
               <NavLink to="/disease-recognition" onClick={() => setNavs(false)}>Disease</NavLink>
                
                 </li>
+                <li>
+                <BsGraphUpArrow 
+             className='disease'/>
+              <NavLink to="/MarketUpdate" onClick={() => setNavs(false)}>Market Update</NavLink>
+               
+                </li>
             
         <li>
         <MdOutlineForum 
         className='form'/>
            <NavLink to="/forum" onClick={() => setNavs(false)}>Forum</NavLink>
             </li>
-          
+            <li>
+              <FaUserAlt className="login" size={35} onClick={toggleLoginForm} />
+            </li>
+           
          </ul>
            <div onClick={() => setNavs(!navs)} className="menu">
            <a href="#">
@@ -55,7 +78,8 @@ return (
           </div>
       </div>
          
-          
+           {/* Render the LoginForm component */}
+      <Login isActive={isActive} closeLoginForm={closeLoginForm} />
      </nav>
    
 );
