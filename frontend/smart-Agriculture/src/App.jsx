@@ -22,6 +22,7 @@ function App() {
         <Route path="/disease-recognition" element={<DiseaseRecognition />} />
         {/* <Route path="/forum" element={<Forum />}  */}
       </Routes>
+      {/* <Footer/> */}
     </Router>
       /* <Navbar/>
      
@@ -30,10 +31,11 @@ function App() {
         {/* <MarketUpdates/>
         <DiseaseRecognition/>
         <Forum/>
-        <Footer/> */
+        */
 
      // </div> */}
     // </>
+
   )
 }
 

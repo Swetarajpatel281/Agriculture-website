@@ -11,12 +11,13 @@ li {
 }
    
    .navbar {
-      width: 100%;
+     width: 100%;
     display: grid;
    grid-template-columns: 6rem 1fr 2fr 6rem;
    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px,
    rgba(0, 0, 0, 0.3) 0px 10px 20px -30px;
-   background-color: white;
+   background-color: rgb(158, 245, 143);
+   position: fixed;
 
    }
 
