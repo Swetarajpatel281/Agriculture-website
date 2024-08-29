@@ -6,13 +6,14 @@ import { FaDisease } from "react-icons/fa";
 import { MdOutlineForum} from "react-icons/md";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
+import logo from "../assets/agro-logo.png"
 const Navbar = () =>{
    const [navs, setNavs] = useState(false);
 
 return (
      <nav className="navbar">
       <div className="logo">
-      <h1>Crop</h1>
+      <img className='img-logo' src={logo} alt="crop" />
       </div>
        <div className={ navs ?" list-item  mobile-list-item":"list-item"}>
          <ul>

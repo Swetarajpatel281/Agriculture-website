@@ -1,0 +1,101 @@
+.weather-card {
+    width: 22rem;
+    min-width: 22rem;
+    height: 30rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9); /* Example background for the card */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .weather-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .place {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .date, .time {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .detail-item {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0; /* Light background for detail items */
+  }
+  
+  .detail-item.windspeed {
+    background-color: #cce5ff; /* Light blue for windspeed */
+  }
+  
+  .detail-item.humidity {
+    background-color: #d4edda; /* Light green for humidity */
+  }
+  
+  .heat-index {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .heat-index-label {
+    font-weight: bold;
+  }
+  
+  .heat-index-value {
+    font-size: 1.25rem;
+  }
+  
+  .divider {
+    background-color: #ced4da;
+    margin: 1rem 0;
+  }
+  
+  .conditions {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
