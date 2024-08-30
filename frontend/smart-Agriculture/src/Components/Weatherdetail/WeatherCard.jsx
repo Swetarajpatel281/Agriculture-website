@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
+import '../../../src/index.css';
+import PropTypes from 'prop-types';
 import {useDate}  from './useDate';
 import sun from '../../assets/icons/sun.png'
 import cloud from '../../assets/icons/cloud.png';
@@ -76,14 +77,14 @@ const WeatherCard = ({
   );
 };
 // Define PropTypes
-// WeatherCard.propTypes = {
-//     temperature: PropTypes.number.isRequired,
-//     windspeed: PropTypes.number.isRequired,
-//     humidity: PropTypes.number.isRequired,
-//     place: PropTypes.string.isRequired,
-//     heatIndex: PropTypes.number,
-//     iconString: PropTypes.string.isRequired,
-//     conditions: PropTypes.string.isRequired,
-//   };
+WeatherCard.propTypes = {
+    temperature: PropTypes.number.isRequired,
+    windspeed: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
+    place: PropTypes.string.isRequired,
+    heatIndex: PropTypes.number,
+    iconString: PropTypes.string.isRequired,
+    conditions: PropTypes.string.isRequired,
+  };
 
 export default WeatherCard;

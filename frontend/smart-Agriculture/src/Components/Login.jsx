@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import './Styles/Login.css'
 import { IoClose } from "react-icons/io5";
+import SignUp from './SignUp';
 const Login = ({ isActive, closeLoginForm }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,6 +14,9 @@ const Login = ({ isActive, closeLoginForm }) => {
     console.log('Email:', email);
     console.log('Password:', password);
     console.log('Remember Me:', rememberMe);
+  };
+  const toggleForm = () => {
+    setIsSignUp(!isSignUp);
   };
 
   return (
@@ -62,8 +67,8 @@ const Login = ({ isActive, closeLoginForm }) => {
           Forgot password? <a href="/">Click here</a>
         </p>
         <p>
-          Don't have an account? <a href="/" id="create-btn">Create one</a>
-        </p>
+            Don't have an account? <a href='/' onClick={toggleForm} className="signup">Create one</a>
+          </p>
       </form>
     </div>
   );
