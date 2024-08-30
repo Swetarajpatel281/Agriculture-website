@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import './App.css'
 import DiseaseRecognition from './Components/DiseaseRecognition';
@@ -18,14 +17,13 @@ function App() {
    
      <Router>
       <Navbar />
-      {/* <Login/> */}
-      <SignUp/>
       <Animatedgif src="loader.gif" alt="loader" />
       <Routes>
         <Route path="/weather" element={<Weather />} />
         {/* <Route path="/seeds" element={<Seeds />} /> */}
         <Route path="/disease-recognition" element={<DiseaseRecognition />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<SignUp/>} />
         {/* <Route path="/forum" element={<Forum />}  */}
       </Routes>
       {/* <Footer/> */}
