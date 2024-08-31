@@ -14,7 +14,7 @@ import logo from "../assets/agro-logo.png"
 import './Weatherdetail/Weather'
 import './DiseaseRecognition'
 import './Seeds'
-import './Forum'
+import './EChaupal'
 import Login from './Login'
 const Navbar = () =>{
    const [navs, setNavs] = useState(false);
@@ -69,7 +69,7 @@ return (
         <li>
         <MdOutlineForum 
         className='form'/>
-           <NavLink to="/forum" onClick={() => setNavs(false)}>E-Chaupal</NavLink>
+           <NavLink to="/EChaupal" onClick={() => setNavs(false)}>E-Chaupal</NavLink>
             </li>
             <li>
               <FaUserAlt className="login" size={35} onClick={toggleLoginForm} />
