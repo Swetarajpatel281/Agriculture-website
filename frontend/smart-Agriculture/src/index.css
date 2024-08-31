@@ -1,1 +1,12 @@
 
+<<<<<<< Updated upstream
+=======
+.glassCard{
+  background: linear-gradient(to right , #82ee5b, #13a174);
+  box-shadow:  0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border: 1px solid rgba(225,225,225,0.18);
+}
+>>>>>>> Stashed changes
