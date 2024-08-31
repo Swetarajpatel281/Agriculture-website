@@ -51,8 +51,9 @@ footer{
 .col:nth-child(1),.col:nth-child(4){
     flex-basis: 15%;
 }
-.col h2{
-    width: fit-content;
+.img-logo{
+    width:20rem;
+    height: 8rem;
     margin-bottom: 30px;
     position: relative;
 }

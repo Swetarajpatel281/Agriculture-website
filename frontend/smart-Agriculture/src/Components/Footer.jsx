@@ -1,6 +1,6 @@
 
 import './styles/Footer.css';
-
+import logo from "../assets/agro-logo.png"
 const Footer = () => {
   return (
     <footer>
@@ -16,9 +16,9 @@ const Footer = () => {
       </div> 
       */}
       <div id="foot">
-        <div className="col">
-          <h1>The agency for impatient brands</h1>
-        </div>
+      <div className="col">
+      <img className='img-logo' src={logo} alt="crop" />
+      </div>
         <div className="col">
           <h2>LONDON</h2>
           <p className="email_id">swetarp@gamil.com</p>
