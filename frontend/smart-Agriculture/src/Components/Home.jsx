@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       {/* <h1>Hello guys</h1> */}
-      <img className="former"src={formerimg} alt="" />
+      {/* <img className="former"src={formerimg} alt="" /> */}
     </div>
   )
 }

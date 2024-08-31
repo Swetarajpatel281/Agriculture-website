@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import DiseaseRecognition from './Components/DiseaseRecognition';
 // import Footer from './Components/Footer';
-// import MarketUpdates from './Components/MraketUpdates';
+import MarketUpdate from './Components/MarketUpdate';
 import Navbar from './Components/Navbar';
 import Login from './Components/Login'
 import Weather from './Components/Weatherdetail/Weather';
@@ -30,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/EChaupal" element={<EChaupal />} />
+        <Route path="/MarketUpdate" element={<MarketUpdate />} />
         {/* <Route path='/footer' emement={<Footer/>}/> */}
       </Routes>
       
