@@ -10,6 +10,8 @@ import Login from './Components/Login'
 import Weather from './Components/Weatherdetail/Weather';
 import Animatedgif from './Components/Animatedgif';
 import SignUp from './Components/SignUp';
+import Home from './Components/Home'
+import Seeds from './Components/Seeds'
 
 function App() {
 
@@ -18,10 +20,11 @@ function App() {
    
      <Router>
       <Navbar />
+      <Home/>
       <Animatedgif src="loader.gif" alt="loader" />
       <Routes>
         <Route path="/weather" element={<Weather />} />
-        {/* <Route path="/seeds" element={<Seeds />} /> */}
+        <Route path="/seeds" element={<Seeds />} />
         <Route path="/disease-recognition" element={<DiseaseRecognition />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />

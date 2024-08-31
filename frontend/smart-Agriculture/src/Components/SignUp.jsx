@@ -6,9 +6,6 @@ const SignUp = () => {
     email: '',
     phone: '',
     gender: '',
-    birthday: '0',
-    birthMonth: '0',
-    birthYear: '0',
     country: 'INDIA',
     password: '',
     confirmPassword: '',
@@ -100,63 +97,6 @@ const SignUp = () => {
                   onChange={handleChange}
                 />{' '}
                 FEMALE
-              </td>
-            </tr>
-            <tr>
-              <td>DATE OF BIRTH (DOB)</td>
-              <td className="dob">
-                <select
-                  name="birthday"
-                  required
-                  value={formData.birthday}
-                  onChange={handleChange}
-                >
-                  <option value="0">DAY</option>
-                  {Array.from({ length: 31 }, (_, i) => (
-                    <option key={i + 1} value={i + 1}>
-                      {i + 1}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  name="birthMonth"
-                  required
-                  value={formData.birthMonth}
-                  onChange={handleChange}
-                >
-                  <option value="0">MONTH</option>
-                  {[
-                    'JAN',
-                    'FEB',
-                    'MAR',
-                    'APR',
-                    'MAY',
-                    'JUN',
-                    'JUL',
-                    'AUG',
-                    'SEP',
-                    'OCT',
-                    'NOV',
-                    'DEC',
-                  ].map((month, index) => (
-                    <option key={index} value={month}>
-                      {month}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  name="birthYear"
-                  required
-                  value={formData.birthYear}
-                  onChange={handleChange}
-                >
-                  <option value="0">YEAR</option>
-                  {Array.from({ length: 25 }, (_, i) => (
-                    <option key={i} value={2024 - i}>
-                      {2024 - i}
-                    </option>
-                  ))}
-                </select>
               </td>
             </tr>
             <tr>
