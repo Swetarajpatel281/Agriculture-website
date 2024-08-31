@@ -28,15 +28,15 @@
     border-top-right-radius: 0.5 rem;
 }
 .custom-card {
-    border: 1px solid; /* Basic border */
+    border: 1px solid; 
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Large shadow */
-    border-radius: 0.5rem; /* Large rounded corners */
-    transition: transform 300ms; /* Transition for scaling */
+    border-radius: 0.5rem; 
+    transition: transform 300ms;
   }
   
-  /* Hover effect */
+
   .custom-card:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
+    transform: scale(1.05); 
   }
   .list-name {
     display: flex; 

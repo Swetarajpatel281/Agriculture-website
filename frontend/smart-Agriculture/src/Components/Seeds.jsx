@@ -5,7 +5,7 @@ const Seeds = () => {
     const [crop, setCrop] = useState(data)
   return (
     <div>
-        <h1>Filds Crops</h1>
+        <h1>Fields Crops</h1>
        <div className='list-container'>
         
         {crop.map((crop,index) =>(
@@ -24,6 +24,7 @@ const Seeds = () => {
             <img src={crop.image} alt={crop.name} className='image' />
            
            </div>
+           
            
         ))}
      </div>

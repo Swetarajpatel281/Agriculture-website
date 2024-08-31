@@ -1,32 +1,26 @@
-import { useState } from 'react';
-import './styles/Forum.css';
 
 const Forum = () => {
-    const [posts, setPosts] = useState([]);
-    const [newPost, setNewPost] = useState('');
+  return (
+    <div>
+        {/* About us  */}
+        <div className="container">
+            <div className="left-col">
+                <img src="" alt="" />
 
-    const handlePostSubmit = () => {
-        setPosts([...posts, newPost]);
-        setNewPost('');
-    };
+            </div>
+            <div className="right-col">
+                <div className="text-inner">
+                    
+                   
+                </div>
+            </div>
 
-    return (
-        <div className="forum" id="forum">
-            <h2>Farmers Forum</h2>
-            <input
-                type="text"
-                value={newPost}
-                onChange={(e) => setNewPost(e.target.value)}
-                placeholder="Share your knowledge or ask a question..."
-            />
-            <button onClick={handlePostSubmit}>Post</button>
-            <ul>
-                {posts.map((post, index) => (
-                    <li key={index}>{post}</li>
-                ))}
-            </ul>
+
         </div>
-    );
-};
+      
+    </div>
+  )
+}
 
-export default Forum;
+export default Forum
+

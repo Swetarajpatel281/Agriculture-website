@@ -37,7 +37,7 @@ return (
          <ul>
         
              <li>
-             <TiWeatherPartlySunny
+             <TiWeatherPartlySunny onClick={() => setNavs(false)}
              className='weather' />
                 <NavLink to="/weather" onClick={() => setNavs(false)}>Weather</NavLink>
                 </li> 
