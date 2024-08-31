@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './Styles/MarketUpdate.css';
 
-// Mock data for states, districts, markets, and crops
+// Expanded mock data for 20 states, their districts, markets, and popular crops
 const stateData = {
   Maharashtra: {
     districts: {
@@ -39,22 +39,125 @@ const stateData = {
     },
     crops: ['Tea', 'Jute', 'Rice'],
   },
+  TamilNadu: {
+    districts: {
+      Chennai: ['Koyambedu Market', 'Madhavaram Market'],
+      Coimbatore: ['Coimbatore Market', 'Gandhipuram Market'],
+    },
+    crops: ['Coconut', 'Banana', 'Turmeric'],
+  },
+  Gujarat: {
+    districts: {
+      Ahmedabad: ['Ahmedabad Market', 'Maninagar Market'],
+      Surat: ['Surat Market', 'Udhana Market'],
+    },
+    crops: ['Cotton', 'Groundnut', 'Sugarcane'],
+  },
+  Rajasthan: {
+    districts: {
+      Jaipur: ['Jaipur Market', 'Johari Bazar'],
+      Udaipur: ['Udaipur Market', 'Hathi Pol Market'],
+    },
+    crops: ['Wheat', 'Barley', 'Maize'],
+  },
+  Bihar: {
+    districts: {
+      Patna: ['Patna Market', 'Gandhi Maidan Market'],
+      Gaya: ['Gaya Market', 'Bodhgaya Market'],
+    },
+    crops: ['Maize', 'Rice', 'Wheat'],
+  },
+  Haryana: {
+    districts: {
+      Gurgaon: ['Gurgaon Market', 'Sadar Bazar'],
+      Faridabad: ['Faridabad Market', 'Ballabgarh Market'],
+    },
+    crops: ['Wheat', 'Rice', 'Sugarcane'],
+  },
+  Odisha: {
+    districts: {
+      Bhubaneswar: ['Bhubaneswar Market', 'Unit 1 Market'],
+      Cuttack: ['Cuttack Market', 'Choudhary Bazar'],
+    },
+    crops: ['Rice', 'Pulses', 'Groundnut'],
+  },
+  AndhraPradesh: {
+    districts: {
+      Visakhapatnam: ['Visakhapatnam Market', 'MVP Market'],
+      Vijayawada: ['Vijayawada Market', 'Besant Road Market'],
+    },
+    crops: ['Rice', 'Chili', 'Cotton'],
+  },
+  Kerala: {
+    districts: {
+      Kochi: ['Ernakulam Market', 'Broadway Market'],
+      Thiruvananthapuram: ['Palayam Market', 'Chalai Market'],
+    },
+    crops: ['Rubber', 'Coconut', 'Pepper'],
+  },
+  MadhyaPradesh: {
+    districts: {
+      Indore: ['Indore Market', 'Sarafa Bazar'],
+      Bhopal: ['Bhopal Market', 'New Market'],
+    },
+    crops: ['Wheat', 'Soybean', 'Rice'],
+  },
+  Telangana: {
+    districts: {
+      Hyderabad: ['Secunderabad Market', 'Gaddiannaram Market'],
+      Warangal: ['Warangal Market', 'Hanamkonda Market'],
+    },
+    crops: ['Cotton', 'Maize', 'Rice'],
+  },
+  Assam: {
+    districts: {
+      Guwahati: ['Fancy Bazar Market', 'Paltan Bazar'],
+      Dibrugarh: ['Dibrugarh Market', 'New Market'],
+    },
+    crops: ['Tea', 'Rice', 'Mustard'],
+  },
+  HimachalPradesh: {
+    districts: {
+      Shimla: ['Lakkar Bazar Market', 'Lower Bazar'],
+      Mandi: ['Mandi Market', 'Sundernagar Market'],
+    },
+    crops: ['Apple', 'Potato', 'Barley'],
+  },
+  Jharkhand: {
+    districts: {
+      Ranchi: ['Ranchi Market', 'Daily Market'],
+      Dhanbad: ['Dhanbad Market', 'Bank More Market'],
+    },
+    crops: ['Rice', 'Wheat', 'Maize'],
+  },
+  Chhattisgarh: {
+    districts: {
+      Raipur: ['Raipur Market', 'Shastri Bazar'],
+      Bilaspur: ['Bilaspur Market', 'Old Bus Stand Market'],
+    },
+    crops: ['Paddy', 'Wheat', 'Maize'],
+  },
+  Uttarakhand: {
+    districts: {
+      Dehradun: ['Paltan Bazar Market', 'Clock Tower Market'],
+      Nainital: ['Mall Road Market', 'Bhotia Market'],
+    },
+    crops: ['Rice', 'Wheat', 'Barley'],
+  }
 };
 
 const MarketUpdate = () => {
-  // State to store filters and data
   const [selectedState, setSelectedState] = useState('');
   const [selectedDistrict, setSelectedDistrict] = useState('');
   const [selectedMarket, setSelectedMarket] = useState('');
   const [selectedCrop, setSelectedCrop] = useState('');
   const [marketData, setMarketData] = useState([]);
+  const [fetchData, setFetchData] = useState(false);
 
-  // Fetch market data when filters change
   useEffect(() => {
-    if (selectedState && selectedDistrict && selectedMarket && selectedCrop) {
+    if (fetchData && selectedState && selectedDistrict && selectedMarket && selectedCrop) {
       const fetchMarketData = async () => {
         try {
-          // Simulate fetching data from API endpoint
           const response = await fetch(
             `API_ENDPOINT?state=${selectedState}&district=${selectedDistrict}&market=${selectedMarket}&crop=${selectedCrop}`
           );
@@ -62,31 +165,34 @@ const MarketUpdate = () => {
           setMarketData(data);
         } catch (error) {
           console.error('Error fetching market data:', error);
+        } finally {
+          setFetchData(false);
         }
       };
 
       fetchMarketData();
     }
-  }, [selectedState, selectedDistrict, selectedMarket, selectedCrop]);
+  }, [fetchData, selectedState, selectedDistrict, selectedMarket, selectedCrop]);
 
-  // Handle State change
   const handleStateChange = (e) => {
     setSelectedState(e.target.value);
     setSelectedDistrict('');
     setSelectedMarket('');
   };
 
-  // Handle District change
   const handleDistrictChange = (e) => {
     setSelectedDistrict(e.target.value);
     setSelectedMarket('');
   };
 
+  const handleApplyClick = () => {
+    setFetchData(true);
+  };
+
   return (
-    <div style={{ background: 'linear-gradient(to bottom, #dff4d2, #b0d6a0)', padding: '20px' }}>
+    <div className="market-update-container">
       <h2>Market Update</h2>
       <div>
-        {/* Filters for State, District, Mandi/Market, and Crop */}
         <select onChange={handleStateChange} value={selectedState}>
           <option value="">Select State</option>
           {Object.keys(stateData).map((state) => (
@@ -128,31 +234,36 @@ const MarketUpdate = () => {
             ))}
           </select>
         )}
+
+        {/* Apply Button to fetch data */}
+        <button onClick={handleApplyClick} style={{ marginLeft: '10px', padding: '10px 20px', backgroundColor: '#2d6a4f', color: '#ffffff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+          Apply
+        </button>
       </div>
 
-      {/* Display Market Data */}
-      <div>
-        {marketData.length > 0 ? (
-          <table>
-            <thead>
-              <tr>
-                <th>Crop</th>
-                <th>Price</th>
+      {/* Display market data in a table */}
+      {marketData.length > 0 ? (
+        <table>
+          <thead>
+            <tr>
+              <th>Market Name</th>
+              <th>Crop</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {marketData.map((market, index) => (
+              <tr key={index}>
+                <td>{market.marketName}</td>
+                <td>{market.crop}</td>
+                <td>{market.price}</td>
               </tr>
-            </thead>
-            <tbody>
-              {marketData.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.cropName}</td>
-                  <td>{item.price}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <p>No data available for the selected filters.</p>
-        )}
-      </div>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        fetchData && <p>No data available. Please adjust your filters and try again.</p>
+      )}
     </div>
   );
 };
