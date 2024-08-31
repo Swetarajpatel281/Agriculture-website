@@ -1,0 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    background: linear-gradient(to right , #82ee5b, #13a174);
+}

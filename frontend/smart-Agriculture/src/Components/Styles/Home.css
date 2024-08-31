@@ -5,3 +5,8 @@
 html,body{
     background-color: white;
 }
+.former{
+    width: 100%;
+    height: 100vh;
+    border-radius: 15px;
+}
