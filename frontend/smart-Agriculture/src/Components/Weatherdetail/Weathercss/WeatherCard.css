@@ -3,7 +3,7 @@
     min-width: 22rem;
     height: 34rem;
     padding: 1rem;
-    background: #cce5ff; /* Example background for the card */
+    background: #cce5ff;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(100px); /* Glassmorphism effect */
@@ -58,7 +58,7 @@
     padding: 0.5rem;
     font-weight: bold;
     border-radius: 0.4rem;
-    background-color: #f0f0f0; /* Light background for detail items */
+    background-color: #f0f0f0;
   }
   
   .detail-item.windspeed {
@@ -87,7 +87,7 @@
   }
   
   .divider {
-    background-color: #ced4da;
+    /* background-color: #ced4da; */
     margin: 1rem 0;
   }
   
