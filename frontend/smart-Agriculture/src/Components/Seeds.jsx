@@ -56,7 +56,7 @@ const Seeds = () => {
             {filteredCrops.length > 0 ? (
                filteredCrops.map((crop, index) => (
                   <div key={index} className='custom-card'>
-                     <a href={`/crop/${crop.crops}`} rel='noopener noreferrer'>
+                     <a href={`http://localhost:8000/crop/${encodeURIComponent(crop.crops)}`} rel='noopener noreferrer'>
                         <img src={crop.image} alt={crop.crops} className='image' />
                      </a>
                   </div>
