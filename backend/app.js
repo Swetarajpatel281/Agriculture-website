@@ -23,6 +23,6 @@ app.get("/crop/:crops", (req,res) => {
     }
 })
 
-app.listen(8000,() => {
-    console.log("Port is listening on 8000");
+app.listen(5173,() => {
+    console.log("Port is listening on 5173");
 })
