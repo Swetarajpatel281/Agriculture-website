@@ -47,33 +47,33 @@ const Home = () => {
         <div className='say-people'>
           <p>AgroLoop’s real-time weather updates helped me avoid a potential disaster during the monsoon. The accurate forecasts allowed me to plan my irrigation better and protect my crops.</p>
           <hr />
-          <p>-ravi kumar</p>
+          <p  className='name'>-ravi kumar</p>
         </div>
         
         <div className="say-people"><p>
         Thanks to AgroLoop’s disease detection feature, I was able to quickly identify and treat a fungal infection in my tomatoes. The precise recommendations saved my entire harvest.</p>
         <hr />
-        <p>-Sunita Verma</p>
+        <p  className='name'>-Sunita Verma</p>
         </div>
         <div className="say-people"><p>
         The market insights provided by AgroLoop were a game-changer for me. I sold my crops at peak prices and increased my profits significantly. The platform truly helped me make informed decisions.</p>
         <hr />
-        <p>-Aarti Patel</p>
+        <p className='name'>-Aarti Patel</p>
         </div>
         <div className="say-people"><p>
         AgroLoop’s crop advice tailored to my soil type was invaluable. It guided me on the best crops to plant and improved my yield considerably. I’m now growing healthier and more productive crops.</p>
-        <hr /><p>
+        <hr /><p  className='name'>
           -Suresh Yadav
         </p>
         </div>
         <div className="say-people"><p>Connecting with other farmers through AgroLoop’s community forum has been incredibly helpful. I’ve learned new farming techniques and shared valuable experiences that have improved my farming practices.</p>
         <hr />
-        <p>Meera Sharma</p>
+        <p  className='name'>Meera Sharma</p>
         </div>
         <div className="say-people"><p>
         AgroLoop’s pest identification tool made it easy for me to recognize and address pest problems early. The targeted solutions helped me protect my crops and ensured a better harvest.</p>
         <hr />
-        <p>-Rajesh Singh</p>
+        <p  className='name'>-Rajesh Singh</p>
         </div>
       </div>
      </div>

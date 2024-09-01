@@ -21,7 +21,7 @@ html, body {
 }
 .text {
     position: absolute;
-    width: 50%;
+    width: 55%;
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%); 
@@ -39,7 +39,7 @@ html, body {
 }
 .text p {
     width: 60%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
     
@@ -151,4 +151,7 @@ margin: 3.5rem;
 }
 .say-people hr{
     margin-top: 2rem;
+}
+.name{
+    color: rgb(246, 113, 51);
 }
