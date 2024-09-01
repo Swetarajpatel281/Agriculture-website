@@ -20,7 +20,7 @@ const Footer = () => {
       <img className='img-logo' src={logo} alt="crop" />
       </div>
         <div className="col">
-          <h2>LONDON</h2>
+          <h2>Product</h2>
           <p className="email_id">swetarp@gamil.com</p>
           <p className="number">+91-7897677561</p>
           <p className="address">
@@ -31,7 +31,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="col">
-          <h2>LONDON</h2>
+          <h2>Contact</h2>
           <p className="email_id">swetarp@gamil.com</p>
           <p className="number">+91-7897677561</p>
           <p className="address">

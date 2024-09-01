@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+// import './App.css'
 import DiseaseRecognition from './Components/DiseaseRecognition';
 // import Footer from './Components/Footer';
 import MarketUpdate from './Components/MarketUpdate';
@@ -19,11 +19,11 @@ function App() {
    
      <Router>
       <Navbar />
-     <Home/>
+     {/* <Home/> */}
      {/* <Weather/> */}
       <Animatedgif src="loader.gif" alt="loader" />
       <Routes>
-        {/* <Route path="home" element={<Home/>} /> */}
+        <Route path="home" element={<Home/>} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/seeds" element={<Seeds />} />
         <Route path="/disease-recognition" element={<DiseaseRecognition />} />
