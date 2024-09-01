@@ -83,14 +83,7 @@ return (
       </div>
       <Login isActive={isActive} closeLoginForm={closeLoginForm} />
      </nav>
-<<<<<<< Updated upstream
-     <section>
 
-=======
-     <section className="home-container">
-       
->>>>>>> Stashed changes
-     </section>
      </>
 );
 } 
