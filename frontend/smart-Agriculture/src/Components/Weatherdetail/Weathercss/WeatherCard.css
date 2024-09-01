@@ -1,12 +1,12 @@
 .weather-card {
-    width: 22rem;
+    width: 60rem;
     min-width: 22rem;
-    height: 30rem;
+    height: 34rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.9); /* Example background for the card */
-    border-radius: 0.5rem;
+    background: #cce5ff; /* Example background for the card */
+    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    backdrop-filter: blur(100px); /* Glassmorphism effect */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +20,8 @@
   }
   
   .weather-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 8rem;
   }
   
   .temperature {
@@ -30,17 +30,13 @@
   }
   
   .place {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    color: rgb(36, 34, 34);
     text-align: center;
   }
   
-  .date-time {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 1rem;
-  }
+  
   
   .date, .time {
     text-align: center;
@@ -57,14 +53,16 @@
   .detail-item {
     flex: 1;
     text-align: center;
+    height: 50%;
+    width: 100%;
     padding: 0.5rem;
     font-weight: bold;
-    border-radius: 0.25rem;
+    border-radius: 0.4rem;
     background-color: #f0f0f0; /* Light background for detail items */
   }
   
   .detail-item.windspeed {
-    background-color: #cce5ff; /* Light blue for windspeed */
+    background-color: rgba(106, 209, 111, 0.9); /* Light blue for windspeed */
   }
   
   .detail-item.humidity {
@@ -94,8 +92,9 @@
   }
   
   .conditions {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    color:rgb(36, 34, 34);
     text-align: center;
   }
   
