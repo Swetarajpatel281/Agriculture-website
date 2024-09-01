@@ -1,12 +1,154 @@
-*{
-    margin: 0;
-    padding: 0;
+
+
+html, body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif; 
+    height: 100%; 
 }
-html,body{
-    background-color: white;
-}
-.former{
+.img {
+    background: white;
     width: 100%;
-    height: 110vh;
-    border-radius: 15px;
+    height: 100vh; 
+    
+}
+.farmer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    /* opacity: 0.7; */
+}
+.text {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%); 
+    /* color: white;  */
+    /* text-align: center; */
+    padding: 2rem; 
+    text-align: left;
+    z-index: 1;
+    /* line-height: 4rem; */
+}
+.text h1{
+    font-size: 4.5rem;
+    color: rgb(62, 17, 103);
+
+}
+.text p {
+    width: 60%;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    
+}
+
+.text button {
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rgb(255, 175, 27);
+    background-color: rgb(42, 41, 39);
+    border: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+.text button:hover{
+    color: white;
+    background-color: rgb(255, 133, 19);
+}
+.identify-crop{
+    display: flex;
+}
+.crop-left{
+    width: 50%;
+    background:white;
+    margin: 3.5rem;
+}
+.plant{
+    object-fit: cover;
+    border-radius: 20px;
+}
+.crop-right{
+width: 50%;
+margin: 3.5rem;
+}
+.crop-right h2{
+    font-size: 4rem;
+    text-align: left;
+}
+.crop-right p{
+    text-align: left;
+}
+.currency{
+    display: flex;
+    line-height: 4rem;
+}
+.map-left{
+    width: 50%;
+    margin: 3.5rem;
+}
+.map-left h1{
+    font-size: 3.8rem;
+    text-align: left;
+    color: rgb(50, 86, 58);
+    font-weight:600;
+}
+
+.map-right{
+    width: 50%;
+}
+.map-right img{
+    object-fit: cover;
+    border-radius: 18px;
+}
+.world-connection{
+    width: 95%;
+    padding: 2rem;
+}
+.world-connection h1{
+    font-size: 3.8rem;
+    color: rgb(50, 86, 58);
+    font-weight:600;
+    text-align: center;
+    left: 50%;
+}
+.world-connection img{
+   width: 50%;
+   margin: auto;
+   
+}
+.map-container{
+    line-height: 200px;
+    height: 200px;
+    text-align: center;
+}
+.comment h1{
+    font-size: 3.8rem;
+    color: rgb(50, 86, 58);
+    font-weight:600;
+    text-align: center;
+    left: 50%;
+    margin-top: 6rem;
+}
+.comment-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.say-people{
+    width: auto;
+    margin: 2rem;
+    padding: 1.5rem;
+    left: 10%;
+    text-align: left;
+    background-color: rgb(230, 227, 227);
+    color: rgb(50, 49, 49);
+    border-radius: 18px;
+}
+.say-people hr{
+    margin-top: 2rem;
 }

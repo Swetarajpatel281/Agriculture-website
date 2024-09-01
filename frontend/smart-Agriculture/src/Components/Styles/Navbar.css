@@ -197,7 +197,6 @@ li {
    }
  
    .list-item {
-     background-color: rgb(243, 107, 107);
      height: 25rem;
      display: grid;
      grid-column: 2/5;
@@ -207,6 +206,7 @@ li {
      transform-origin: top;
      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 40px -10px,
        rgba(0, 0, 0, 0.3) 0px 10px 40px -20px;
+       
    }
  
    .list-item ul {
