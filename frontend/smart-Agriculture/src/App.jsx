@@ -19,7 +19,7 @@ function App() {
    
      <Router>
       <Navbar />
-     <Home/>
+     {/* <Home/> */}
      {/* <Weather/> */}
       <Animatedgif src="loader.gif" alt="loader" />
       <Routes>

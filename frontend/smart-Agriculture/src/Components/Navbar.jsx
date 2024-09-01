@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import './Styles/Navbar.css';
 import { IoMdHome } from "react-icons/io";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import formerimg from '../assets/formerimg.jpg'
 import { GiGrainBundle } from "react-icons/gi";
 import { FaDisease } from "react-icons/fa";
 import { MdOutlineForum} from "react-icons/md";
@@ -25,7 +24,7 @@ const Navbar = () =>{
      setIsActive(!isActive);
    };
  
-   // Function to close the login form
+   
    const closeLoginForm = () => {
      setIsActive(false);
    };
@@ -39,7 +38,7 @@ return (
          <ul>
             <li>
             <IoMdHome className="home" />
-            <NavLink to="/weather" onClick={() => setNavs(false)}>Home</NavLink>
+            <NavLink to="/home" onClick={() => setNavs(false)}>Home</NavLink>
             </li>
              <li>
              <TiWeatherPartlySunny onClick={() => setNavs(false)}
@@ -82,15 +81,15 @@ return (
            </a>
           </div>
       </div>
-         
-           {/* Render the LoginForm component */}
       <Login isActive={isActive} closeLoginForm={closeLoginForm} />
      </nav>
+<<<<<<< Updated upstream
      <section>
-      {/* <div className="home-container">
-        <h1>meee</h1>
-        <img  className="former-img" src={formerimg} alt="" />
-      </div> */}
+
+=======
+     <section className="home-container">
+       
+>>>>>>> Stashed changes
      </section>
      </>
 );
