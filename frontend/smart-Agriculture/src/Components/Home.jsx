@@ -11,7 +11,7 @@ const Home = () => {
       <img className="farmer"src={formerimg} alt="" />
       </div>
       <div className='text'>
-        <h1>Empower Your Forming with AgroLoop</h1>
+        <h1>Empower Your Farming with AgroLoop</h1>
         <p>Get Expert Crop Advice, Real-Time Weather Updates, Market Insights, Diseases Detection, and Connect with Fellow Farmers-All in One Platform</p>
         <button>Get Started</button>
       </div>
