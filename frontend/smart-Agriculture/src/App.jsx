@@ -33,7 +33,7 @@ function App() {
         <Route path="/MarketUpdate" element={<MarketUpdate />} />
         {/* <Route path='/footer' emement={<Footer/>}/> */}
       </Routes>
-      
+      {/* <Footer/> */}
     </Router>
 
   )
