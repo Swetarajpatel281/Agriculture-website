@@ -58,11 +58,14 @@ const Seeds = () => {
             {filteredCrops.length > 0 ? (
                filteredCrops.map((crop, index) => (
                   <div key={index} className='custom-card'>
-                      <Spinner src="spinner.gif" alt="spinner" />
+                     
                      <a href={`http://localhost:8000/crop/${encodeURIComponent(crop.crops)}`} rel='noopener noreferrer'>
                     
-                        <img src={crop.image} alt={crop.crops} className='image' />
+                        <img src={crop.image} alt={crop.crops} 
+                        
+                        className='image' />
                      </a>
+                     {/* <Spinner src="spinner.gif" alt="spinner" /> */}
                   </div>
                ))
             ) : (
